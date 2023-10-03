@@ -1,0 +1,33 @@
+.form{
+    width: 30%;
+    margin-left: 33%;
+    margin-top: 5%;
+    border-radius: 10%;
+    border: solid rgb(108, 238, 119);
+    color: rgb(16, 111, 24);
+    font-size: 14;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+.form h3 {
+    font-size: 2em;
+    padding: 10px;
+    color: rgb(16, 111, 24);
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    font-weight: bold;
+    padding-left: 10px;
+    
+}
+
+.form input { 
+    border-color: rgba(10, 88, 24, 0.8); 
+    outline: none; 
+}
+
+.form select {  
+    border: 2px solid rgba(10, 88, 24, 0.8);
+    color: rgba(10, 88, 24, 0.8);
+    width: 170px;
+    height: 20px;
+}

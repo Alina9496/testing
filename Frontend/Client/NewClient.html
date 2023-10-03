@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Регистрация</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../Style/Cap.css">
+        <link rel="stylesheet" href="../Style/Form.css">
+        <link rel="stylesheet" href="../Style/Button.css">
+        <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="topmenu">
+                    <li><a href="http://127.0.0.1:3000/">Главная</a></li>
+                    <li>
+                        <a class="submenu-link">Клиенты</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/page/listClient">Список</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/newClient">Регистрация</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/record">Запись</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="submenu-link">Специалисты</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/page/listDoctor">Список</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/dismiss">Увольнение</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/newDoctor">Принять на работу</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/repurposing">Новая профессия</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="submenu-link">Отчётность</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/statistic">Статистика</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDisease">Список клиентов с определенным заболеванием</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/diseasesPatients">Список клиентов и их заболеваний</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/specialistsSpecificDisease">Список врачей для одного заболевания</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDoctor">Список клиентов у одного врача</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDay">Список клиентов в один день</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/specializationDoctors">Список врачей и их специализация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <form class="form">
+            <h3>Регистрация</h3>
+            <p>ФИО:</p>
+            <input id="name" name="input" type="text" autocomplete="off">
+            <p>Номер телефона</p>
+            <input id="telephone" name="input" type="text" autocomplete="off">
+            <p>Адрес:</p>
+            <input id="address" name="input" type="text" autocomplete="off">
+            <p>Болезнь:</p>
+            <select id="disease" onclick='choice()'></select>
+            <p>Ваш специалист:</p>
+            <select id="specialist" onclick='getSpecialist()'></select>
+            <p>
+                <button class="button" type="button" onclick='Record()'>Записаться</button>
+            </p>
+        </form>
+        <script src="/Frontend/Client/NewClient.js"></script>
+    </body>
+</html>

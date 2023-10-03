@@ -1,0 +1,54 @@
+h1 {
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    font-size: 40px;
+    color: #4C596C;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+ 
+h3 {
+    font-family: 'Poiret One', cursive;
+    font-size: 30px;
+    color: #2aec5a;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 30px 0 10px;
+    letter-spacing: 0.04em;
+}
+
+.ul {
+    padding-left: 25%;
+    margin-left: 0;
+    list-style: none;
+    counter-reset: li;
+    font-family: calibri;
+    width: 50%;
+}
+
+.ul li {
+    padding: 10px 0;
+    position: relative;
+    left: 1.5em;
+    margin-bottom: 0.75em;
+    padding-left: 1em;
+    background: #b9eeb4;
+}
+
+.ul li:before {
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -1.5em;
+    width: 1.875em;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: #67d4d6;
+    border-bottom-left-radius: 70em;
+    border-top-left-radius: 70em;
+    counter-increment: li;
+    content: counter(li);
+}

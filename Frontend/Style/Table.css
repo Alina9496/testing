@@ -1,0 +1,37 @@
+caption {
+    font-size: 30px;
+    color: rgb(56, 153, 0);
+    margin-bottom: 20px;
+    margin-top: 8%;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    background: white;
+    border-collapse: collapse;
+    text-align: center;
+    margin: 0 auto 20px;
+    border: 1px solid rgb(56, 153, 0);
+    
+}
+
+th {
+    font-weight: normal;
+    font-size: 14px;
+    background: rgb(43, 247, 135);
+    color: #404040;
+    border-bottom: 1px dashed rgb(56, 153, 0);
+    padding: 12px 17px;
+}
+ 
+td { 
+    transition: .3s linear;
+    color: #404040;
+    padding: 7px 17px;
+} 
+
+tr:hover td {
+    background:#138f07; 
+    color: #ffffff;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Список клиентов с определенным заболеванием</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../Style/Cap.css">
+        <link rel="stylesheet" href="../Style/Table.css">
+        <link rel="stylesheet" href="../Style/List.css">
+        <script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="topmenu">
+                    <li><a href="http://127.0.0.1:3000/">Главная</a></li>
+                    <li>
+                        <a class="submenu-link">Клиенты</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/page/listClient">Список</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/newClient">Регистрация</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/record">Запись</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="submenu-link">Специалисты</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/page/listDoctor">Список</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/dismiss">Увольнение</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/newDoctor">Принять на работу</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/repurposing">Новая профессия</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="submenu-link">Отчётность</a>
+                        <ul class="submenu">
+                            <li><a href="http://127.0.0.1:3000/statistic">Статистика</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDisease">Список клиентов с определенным заболеванием</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/diseasesPatients">Список клиентов и их заболеваний</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/specialistsSpecificDisease">Список врачей для одного заболевания</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDoctor">Список клиентов у одного врача</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/patientsSpecificDay">Список клиентов в один день</a></li>
+                            <li><a href="http://127.0.0.1:3000/page/specializationDoctors">Список врачей и их специализация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="choice" class="choice"></div>
+
+        <div id="data">
+            <table>
+                <caption>Список</caption>
+                <thead>
+                    <tr>
+                        <th>Клиент</th>
+                        <th>Телефон</th>
+                        <th>Адрес</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+        <script src="/Frontend/Reporting/PatientsSpecificDisease.js"></script>
+    </body>
+</html>

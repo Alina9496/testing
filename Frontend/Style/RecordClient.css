@@ -1,0 +1,91 @@
+.human {
+    text-align: center;
+}
+.data{ 
+    width: 500px;
+    margin-left: 140px;
+}
+
+.record{
+    width: 500px;
+    height: 400px;
+    position:absolute;
+    right: 140px;
+    top: 196px;
+    text-align: center;
+}   
+
+.record, .data{
+    background-color: rgb(203, 248, 235);
+    border: solid rgb(0, 255, 21);
+    border-radius: 5%;
+}
+
+h3 {
+    font-family: 'Poiret One', cursive;
+    font-size: 30px;
+    color: #27906d;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+    margin: 30px 0 10px;
+    letter-spacing: 0.04em;
+}
+
+.subParagraph {
+    list-style: none;
+    font-family: "Lucida Sans";
+}
+ 
+.subParagraph li {
+    position: relative;
+    padding: 20px 0 20px 40px;
+    color: #185843;
+    font-variant: small-caps;
+    font-weight: bold;
+    cursor: pointer;
+}
+ 
+.subParagraph li:before {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #16c433;
+    content: "";
+    left: 0;
+    transition: .3s ease-in-out;
+    top: 27px;
+}
+ 
+.subParagraph li:after {
+    position: absolute;
+    border-left: 1px dotted #2aaa52;
+    width: 1px;
+    bottom: -12px;
+    content: "";
+    left: 3px;
+    top: 48px;
+ }
+ 
+.subParagraph li:hover:before {
+    box-shadow: 0 0 0 10px rgba(4, 238, 109, 0.2)
+}
+ 
+.subParagraph li:last-child:after {
+    content: none;
+}
+ 
+select, input {  
+    border: 2px solid rgba(10, 88, 24, 0.8);
+    color: rgba(10, 88, 24, 0.8);
+    width: 170px;
+    height: 20px;
+}
+
+p {
+    font-family: 'Poiret One', cursive;
+    color: #27906d;
+    line-height: 1.4;
+    font-size: 18px;
+}
