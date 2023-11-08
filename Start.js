@@ -1,30 +1,30 @@
-const express = require("express");
-const app = express();
-const jsonParser = express.json();
+const express = require("express")
+const app = express()
+const jsonParser = express.json()
 
 const { Client } = require('pg')
 const client = new Client({
     user: 'postgres',
     host: 'localhost',
     database: 'Clinic',
-    password: '1747',
+    password: '4444',
     port: 5432,
 });
 
-const select = require("./RequestSQL");
+const select = require("./RequestSQL")
 
-module.exports.app = app
+module.exports.app    = app
 module.exports.client = client
 
 try {
-    client.connect();
-    console.log("Подключение успешно установлено");
-    app.listen(3000);
+    client.connect()
+    console.log("Подключение успешно установлено")
+    app.listen(3000)
 }
 catch(err) {
-    console.log("Возникла ошибка");
-    return console.log(err);
-} 
+    console.log("Возникла ошибка")
+    return console.log(err)
+}
 
 app.get('/list/doctor', function(request, response){
     if(!request.query) 

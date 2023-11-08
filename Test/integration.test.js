@@ -1,7 +1,7 @@
 const request = require("supertest")
 const assert = require("assert")
-const app = require("./Start").app
-const connection = require("./Start").client
+const app = require("../Start").app
+const connection = require("../Start").client
 
 //Тестирование поисковой строки
 describe('endpoint /search/listClient', function() {
@@ -25,14 +25,15 @@ describe('endpoint /search/listClient', function() {
 
     after(() => {
         connection.query("delete FROM patient WHERE fio = 'test'");
+        process.exit(1)
     });
       
     it("data found", function(done){
         const result = [{
-            fio        : 'test', 
-            telephone  : 'telephoneTest', 
-            address    : 'addressTest', 
-            doctor  : 'Иванов И.А.'
+            fio       : 'test', 
+            telephone : 'telephoneTest', 
+            address   : 'addressTest', 
+            doctor    : 'Иванов И.А.'
         }]
         request(app)
             .get("/search/listClient")

@@ -16,6 +16,6 @@
     "supertest": "^6.3.3"
   },
   "scripts": {
-    "test": "mocha integration.test.js"
+    "test": "mocha Test/integration.test.js"
   }
 }
