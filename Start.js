@@ -7,11 +7,14 @@ const client = new Client({
     user: 'postgres',
     host: 'localhost',
     database: 'Clinic',
-    password: '4444',
+    password: '1747',
     port: 5432,
 });
 
 const select = require("./RequestSQL");
+
+module.exports.app = app
+module.exports.client = client
 
 try {
     client.connect();
