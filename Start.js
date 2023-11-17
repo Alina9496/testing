@@ -7,7 +7,7 @@ const client = new Client({
     user: 'postgres',
     host: 'localhost',
     database: 'Clinic',
-    password: '4444',
+    password: '1747',
     port: 5432,
 });
 
@@ -202,7 +202,7 @@ app.get('/report/specializationDoctors', function(request, response){
 app.post("/edit/repurposing", jsonParser, async(request, response)=> {
     if(!request.body) 
         return response.sendStatus(400);
-         
+    
     let text = select.repurposing;
     let value = [
         request.body.special,
@@ -286,6 +286,7 @@ app.post("/add/patient", jsonParser, async(request, response)=> {
         request.body.doctor,
         request.body.disease
     ];
+
     try {
         await client.query(select.addPatient, value);
         response.sendStatus(200);

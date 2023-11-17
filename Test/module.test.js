@@ -38,7 +38,7 @@ describe("endpoint /search/listClient", function(){
 describe("endpoint /add/patient", function(){
 
     it('add client', async () => {
-        const request = [{ name: 'name', telephone: "22-22-22", address: "address", doctor: "doctor", disease: "disease"}]
+        const request = [{ name: 'name', telephone: "22-22-22", address: "address", doctor: "1", disease: "1"}]
 
         nock('https://localhost:3000')
             .post('/add/patient', request)
@@ -56,7 +56,10 @@ describe("endpoint /add/patient", function(){
 describe("endpoint /edit/record", function(){
 
     it('execute client record', async () => {
-        const request = [{ nameId: 1, data: ["2023-11-07"]}]
+        const request = {
+            nameId: '20',
+            data  : { '1': [ '2023-12-25' ] }
+        }
 
         nock('https://localhost:3000')
             .post('/edit/record', request)
@@ -74,8 +77,7 @@ describe("endpoint /edit/record", function(){
 describe("endpoint /edit/repurposing", function(){
 
     it('change of specialization', async () => {
-        const request = [{ special: 1, fio: 4}]
-    
+        const request = [{ special: 1, fio: 'test'}]
         nock('https://localhost:3000')
             .post('/edit/repurposing', request)
             .reply(200);
