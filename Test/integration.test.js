@@ -4,6 +4,7 @@ const app = require("../Start").app
 const connection = require("../Start").client
 
 // Тестирование поисковой строки
+
 describe('endpoint /search/listClient', function() {
     before( async () => {
         const data = { name: 'test', telephone: "telephoneTest", address: "addressTest", doctor: "1", disease: "1"}
@@ -53,6 +54,15 @@ describe('endpoint /edit/repurposing', function() {
       .send(data);
     
     assert.deepEqual(response.status, 200);
+  });
+
+  it('not added client', async () => {
+    const data = { name: 'test', tel: "22-22-22", address: "address", doctor: "1", disease: "1"}
+    const response = await request(app)
+      .post('/add/patient')
+      .send(data);
+    
+    assert.deepEqual(response.status, 500);
   });
 });
 
@@ -106,5 +116,15 @@ describe('endpoint /edit/repurposing', function() {
             .send(data);
         
         assert.deepEqual(response.status, 200);
+    });
+
+    it('the specialty has not changed', async () => {
+        const data = { spec: '1', fio: 'test' }
+
+        const response = await request(app)
+            .post('/edit/repurposing')
+            .send(data);
+        
+        assert.deepEqual(response.status, 500);
     });
 });
